@@ -40,7 +40,7 @@ html, body {
 
 .icons, .names {
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 50px);
     align-items: center;
     margin-bottom: 200px;
 }
@@ -152,12 +152,18 @@ html, body {
 }
 
 .action-buttons {
-    display: grid;
+    display: inline-grid;
     grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
-.action-buttons>button{
+.action-buttons>div{
     grid-row: 2;
+    margin: 0px;
+    padding: 0px;
+
 }
 
 .projects>div{
@@ -166,31 +172,29 @@ html, body {
     background-color: white;
     border-radius: 20px;
     padding: 15px;
-    display: grid;
+    display: inline-grid;
     grid-template-rows: 30px 100px 60px;
-    grid-template-columns: 8.5fr repeat(3, 1.5fr);
+    grid-template-columns: 8.5fr repeat(3, 50px);
     border-left: 5px solid yellow;
-    height: 200px;
+    height: 225px;
+    width: 250px;
 }
 
-.card>img {
+.card >img {
    align-self: end;
    justify-self: end;
    grid-row: 3 span 1;
 }
 
 .star {
-    grid-row: 3;
     grid-column: 2/3;
 }
 
 .eye {
-    grid-row: 3;
     grid-column: 3/4;
 }
 
 .share {
-    grid-row: 3;
     grid-column: 4/5;
 }
 
@@ -199,7 +203,7 @@ html, body {
     grid-column: 1/6;
 }
 
-.content {
+.card > .content {
     grid-row: 2;
     grid-column: 1/5;
 }
