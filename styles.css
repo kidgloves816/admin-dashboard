@@ -11,31 +11,30 @@ html, body {
 }
 
 .sidebar {
-    border: 1px solid black;
+    background-color: #0ea5e9;
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 40px 10fr;
+}
+
+.icons > img, .branding > img{
+    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(168deg) brightness(100%) contrast(103%);
+}
+
+.names > p, .branding > p {
+    color: white;
 }
 
 .branding {
-    border: 1px solid orange;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    align-items: center;
 }
 
 .navigation {
-    border: 1px solid green;
     display: grid;
     grid-template-columns: 1fr 7fr;
     column-gap: 10px;
-}
-
-.icons {
-    border: 1px solid grey;
-}
-
-.names {
-    border: 1px solid brown;
 }
 
 .icons, .names {
@@ -58,16 +57,16 @@ html, body {
 }
 
 .header {
-    border: 1px solid blue;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 50px 100px;
+    box-shadow: 0px 5px 5px rgba(211, 211, 211, 0.267);
+    z-index: 10;
 }
 
 .search-bar {
-    border: 1px solid blue;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     display: grid;
@@ -81,7 +80,6 @@ html, body {
 }
 
 .user-info {
-    border: 1px solid red;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     display: grid;
@@ -106,7 +104,6 @@ html, body {
 }
 
 .buttons {
-    border: 1px solid purple;
     grid-column: 2 / 3;
     grid-row: 1 / 3;
     display: grid;
@@ -116,7 +113,6 @@ html, body {
 
 
 .main-content {
-    border: 1px solid red;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: grid;
@@ -124,10 +120,11 @@ html, body {
     grid-template-columns: minmax(300px,900px) 3fr;
     row-gap: 10px;
     background-color: lightgray;
+    padding-right: 15px;
+    height: fit-content;
 }
 
 .projects {
-    border: 1px solid blue;
     grid-row: 1 / 3;
     grid-column: 1 / 2;
     display: grid;
@@ -147,12 +144,10 @@ html, body {
 }
 
 .announcements {
-    border: 1px solid black;
     grid-row: 1 / 2;
 }
 
 .trending {
-    border: 1px solid green;
     grid-row: 2 / 3;
 }
 
@@ -194,7 +189,6 @@ html, body {
 }
 
 .projects>div{
-    border: 1px solid white;
     box-shadow: 20px;
     background-color: white;
     border-radius: 20px;
@@ -253,6 +247,12 @@ html, body {
     display: grid;
     grid-template-rows: repeat(4, 65px);
     row-gap: 10px;
+    border: 15px solid white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: white;
+    height: fit-content;
+    padding-bottom: 20px;
 }
 
 .avatar {
@@ -275,4 +275,12 @@ html, body {
 
 .users > p {
     margin: 0px;
+}
+
+button {
+    background-color: #0ea5e9;
+    color: #f0f9ff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 15px;
 }
